@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dealer : Singleton<Dealer>
+public class Dealer 
 {
-    Action actions;
     public int valueSum = 0;
 }
