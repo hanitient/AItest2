@@ -15,11 +15,11 @@ D:/GitHub/MyAI_2021_06_13/AItest2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51916
+64605
 Successfully changed project path to: D:/GitHub/MyAI_2021_06_13/AItest2
 D:/GitHub/MyAI_2021_06_13/AItest2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 22.08 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 21.76 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1c1 (98d1c84f5ffb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.7f1c1/Editor/Data/Resources/UnitySubsystems
@@ -35,99 +35,434 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1c1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.7f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56356
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56740
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.7f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006412 seconds.
+Registered in 0.005955 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 33.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 22.42 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.607 seconds
+- Completed reload, in  1.325 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002525 seconds.
+Registered in 0.001880 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.349 seconds
+- Completed reload, in  0.920 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1148 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 62.1 MB.
 System memory in use after: 62.2 MB.
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1589.
-Total: 2.333000 ms (FindLiveObjects: 0.228000 ms CreateObjectMapping: 0.085400 ms MarkObjects: 1.917100 ms  DeleteObjects: 0.101000 ms)
+Total: 1.871100 ms (FindLiveObjects: 0.280200 ms CreateObjectMapping: 0.068700 ms MarkObjects: 1.460400 ms  DeleteObjects: 0.059800 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/GameManager.cs
-  artifactKey: Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.cs using Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecd624e8dd0ba121194ae6c949c47ca5') in 0.031443 seconds
-  Import took 0.033724 seconds .
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.024608 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.026098 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000829 seconds.
-  path: Assets/Scripts/GameManager.cs
-  artifactKey: Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.cs using Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecd624e8dd0ba121194ae6c949c47ca5') in 0.002926 seconds
-  Import took 0.005672 seconds .
+  Time since last request: 0.015925 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000211 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019809 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000462 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.002074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021610 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000198 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017607 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000195 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016636 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018018 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000200 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020239 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000192 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019666 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000207 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016527 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000197 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019139 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000197 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017093 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000193 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017473 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000200 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017704 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000194 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019617 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000198 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016519 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000203 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016886 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000198 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019731 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000198 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020256 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000223 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016636 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000214 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016485 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000195 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020165 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000195 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001545 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019299 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000204 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019655 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000211 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019999 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000193 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017982 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000237 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001737 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019402 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000199 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020258 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000191 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020909 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000208 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018495 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000198 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019212 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000191 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016225 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000236 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016576 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000194 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016720 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000193 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019904 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000382 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.003289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015870 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000198 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017451 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000195 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.018921 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000194 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017806 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000199 seconds
+  ERROR: Build asset version error: assets/scripts/framework/staticdata.cs in SourceAssetDB has modification time of '2021-06-14T08:22:40.8223656Z' while content on disk has modification time of '2021-06-14T15:36:05.7432019Z'
+  Import took 0.001544 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002175 seconds.
+Registered in 0.001790 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.000 seconds
+- Completed reload, in  0.895 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.7 MB.
 System memory in use after: 60.8 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1592.
-Total: 2.046300 ms (FindLiveObjects: 0.267100 ms CreateObjectMapping: 0.030400 ms MarkObjects: 1.730900 ms  DeleteObjects: 0.016500 ms)
+Total: 2.467300 ms (FindLiveObjects: 0.110300 ms CreateObjectMapping: 0.028900 ms MarkObjects: 2.308500 ms  DeleteObjects: 0.018400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.320742 seconds.
-  path: Assets/Scripts/GameManager.cs
-  artifactKey: Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.cs using Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e47621b3f120e223f062aa8da7be754') in 0.003573 seconds
-  Import took 0.005332 seconds .
+  Time since last request: 3.663960 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e43fff56c5c75a9e04822b9ff7db9d') in 0.003953 seconds
+  Import took 0.005802 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001048 seconds.
-  path: Assets/Scripts/GameManager.cs
-  artifactKey: Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameManager.cs using Guid(0ff7ec31fcaa4d242951b5b0fa5bf8d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e47621b3f120e223f062aa8da7be754') in 0.002184 seconds
-  Import took 0.004136 seconds .
+  Time since last request: 1.603275 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e43fff56c5c75a9e04822b9ff7db9d') in 0.002039 seconds
+  Import took 0.003652 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003863 seconds.
+Registered in 0.002010 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
+- Completed reload, in  0.921 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -136,18 +471,18 @@ System memory in use before: 60.7 MB.
 System memory in use after: 60.8 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1595.
-Total: 1.581200 ms (FindLiveObjects: 0.153100 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.374000 ms  DeleteObjects: 0.013200 ms)
+Total: 1.987200 ms (FindLiveObjects: 0.176300 ms CreateObjectMapping: 0.088700 ms MarkObjects: 1.703300 ms  DeleteObjects: 0.017200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002558 seconds.
+Registered in 0.001826 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.860 seconds
+- Completed reload, in  0.862 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -156,187 +491,143 @@ System memory in use before: 60.7 MB.
 System memory in use after: 60.8 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1598.
-Total: 1.757500 ms (FindLiveObjects: 0.237000 ms CreateObjectMapping: 0.034600 ms MarkObjects: 1.472000 ms  DeleteObjects: 0.012600 ms)
+Total: 2.039100 ms (FindLiveObjects: 0.191200 ms CreateObjectMapping: 0.056000 ms MarkObjects: 1.777100 ms  DeleteObjects: 0.012900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001875 seconds.
+Registered in 0.001927 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.864 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1601.
+Total: 1.586000 ms (FindLiveObjects: 0.102600 ms CreateObjectMapping: 0.025000 ms MarkObjects: 1.445500 ms  DeleteObjects: 0.012100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002033 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.858 seconds
+- Completed reload, in  0.866 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.7 MB.
-System memory in use after: 60.8 MB.
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1601.
-Total: 1.474300 ms (FindLiveObjects: 0.124000 ms CreateObjectMapping: 0.030700 ms MarkObjects: 1.306100 ms  DeleteObjects: 0.012300 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1604.
+Total: 1.691400 ms (FindLiveObjects: 0.393800 ms CreateObjectMapping: 0.038900 ms MarkObjects: 1.245300 ms  DeleteObjects: 0.012600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 437.954732 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1493e2a107f5a12059ee4278258d91b8') in 0.004029 seconds
+  Import took 0.005726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.222053 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1493e2a107f5a12059ee4278258d91b8') in 0.002210 seconds
+  Import took 0.004251 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002745 seconds.
+Registered in 0.002589 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.120 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1607.
+Total: 1.797300 ms (FindLiveObjects: 0.132700 ms CreateObjectMapping: 0.035800 ms MarkObjects: 1.614400 ms  DeleteObjects: 0.013100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002551 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.837 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.7 MB.
-System memory in use after: 60.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1604.
-Total: 1.620800 ms (FindLiveObjects: 0.118100 ms CreateObjectMapping: 0.032800 ms MarkObjects: 1.455900 ms  DeleteObjects: 0.013100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001876 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.886 seconds
+- Completed reload, in  0.865 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.7 MB.
-System memory in use after: 60.8 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1607.
-Total: 1.568800 ms (FindLiveObjects: 0.216600 ms CreateObjectMapping: 0.055400 ms MarkObjects: 1.283000 ms  DeleteObjects: 0.012500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002227 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.7 MB.
-System memory in use after: 60.8 MB.
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1610.
-Total: 1.732700 ms (FindLiveObjects: 0.205300 ms CreateObjectMapping: 0.046800 ms MarkObjects: 1.466800 ms  DeleteObjects: 0.012400 ms)
+Total: 1.790900 ms (FindLiveObjects: 0.117600 ms CreateObjectMapping: 0.032800 ms MarkObjects: 1.626800 ms  DeleteObjects: 0.012500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002483 seconds.
+Registered in 0.002132 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.854 seconds
+- Completed reload, in  0.840 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.8 MB.
 System memory in use after: 60.9 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1613.
-Total: 1.555000 ms (FindLiveObjects: 0.146700 ms CreateObjectMapping: 0.034000 ms MarkObjects: 1.356200 ms  DeleteObjects: 0.016700 ms)
+Total: 2.367000 ms (FindLiveObjects: 0.281300 ms CreateObjectMapping: 0.057500 ms MarkObjects: 2.008600 ms  DeleteObjects: 0.017900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001936 seconds.
+Registered in 0.001775 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.888 seconds
+- Completed reload, in  0.841 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.8 MB.
 System memory in use after: 60.9 MB.
 
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1616.
-Total: 1.611900 ms (FindLiveObjects: 0.163400 ms CreateObjectMapping: 0.042000 ms MarkObjects: 1.391000 ms  DeleteObjects: 0.014300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001897 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.853 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1619.
-Total: 1.610400 ms (FindLiveObjects: 0.143400 ms CreateObjectMapping: 0.030600 ms MarkObjects: 1.423200 ms  DeleteObjects: 0.012000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002173 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.854 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1622.
-Total: 1.746900 ms (FindLiveObjects: 0.219900 ms CreateObjectMapping: 0.065400 ms MarkObjects: 1.442500 ms  DeleteObjects: 0.017500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002600 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.860 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.8 MB.
-System memory in use after: 60.9 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1625.
-Total: 2.052900 ms (FindLiveObjects: 0.129800 ms CreateObjectMapping: 0.026700 ms MarkObjects: 1.880300 ms  DeleteObjects: 0.015300 ms)
+Total: 1.994800 ms (FindLiveObjects: 0.321300 ms CreateObjectMapping: 0.089400 ms MarkObjects: 1.549400 ms  DeleteObjects: 0.033800 ms)
 
 ========================================================================
 Received Prepare
@@ -347,7 +638,27 @@ Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.897 seconds
+- Completed reload, in  0.864 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1619.
+Total: 1.721400 ms (FindLiveObjects: 0.336000 ms CreateObjectMapping: 0.111100 ms MarkObjects: 1.261300 ms  DeleteObjects: 0.011800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002436 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.912 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -355,43 +666,67 @@ Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.8 MB.
 System memory in use after: 60.9 MB.
 
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1622.
+Total: 1.875400 ms (FindLiveObjects: 0.271700 ms CreateObjectMapping: 0.076500 ms MarkObjects: 1.508000 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002178 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.915 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 60.9 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1625.
+Total: 1.662100 ms (FindLiveObjects: 0.161100 ms CreateObjectMapping: 0.038000 ms MarkObjects: 1.448000 ms  DeleteObjects: 0.013600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001863 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.861 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.8 MB.
+System memory in use after: 61.0 MB.
+
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1628.
-Total: 1.831500 ms (FindLiveObjects: 0.146200 ms CreateObjectMapping: 0.042300 ms MarkObjects: 1.620300 ms  DeleteObjects: 0.021800 ms)
+Total: 2.028400 ms (FindLiveObjects: 0.251200 ms CreateObjectMapping: 0.071200 ms MarkObjects: 1.690500 ms  DeleteObjects: 0.014200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13135.018685 seconds.
-  path: Assets/Prefab/Card.prefab
-  artifactKey: Guid(0e8fa7148743fdf4b83d47845855ac54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Card.prefab using Guid(0e8fa7148743fdf4b83d47845855ac54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c44d432a578788ce21f34919aaf305b') in 0.035395 seconds
-  Import took 0.037513 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.418454 seconds.
-  path: Assets/Prefab/Game.prefab
-  artifactKey: Guid(021aea2aa82916b4c8c38d4f79afddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Game.prefab using Guid(021aea2aa82916b4c8c38d4f79afddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359b1061e1fafa7ac26d082a6dec7c01') in 0.005569 seconds
-  Import took 0.007847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.020913 seconds.
-  path: Assets/Prefab/Game.prefab
-  artifactKey: Guid(021aea2aa82916b4c8c38d4f79afddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Game.prefab using Guid(021aea2aa82916b4c8c38d4f79afddb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359b1061e1fafa7ac26d082a6dec7c01') in 0.004006 seconds
-  Import took 0.005825 seconds .
+  Time since last request: 1124.542694 seconds.
+  path: Assets/Scripts/Framework/StaticData.cs
+  artifactKey: Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Framework/StaticData.cs using Guid(9e34476b7f17d7a428b384d81413b94a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afffff29481e2931cd03cfc748c1f1f0') in 0.003794 seconds
+  Import took 0.005606 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001804 seconds.
+Registered in 0.002673 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.851 seconds
+- Completed reload, in  0.872 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -399,67 +734,187 @@ Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.9 MB.
 System memory in use after: 61.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1633.
-Total: 1.792800 ms (FindLiveObjects: 0.126300 ms CreateObjectMapping: 0.031700 ms MarkObjects: 1.620300 ms  DeleteObjects: 0.013600 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1631.
+Total: 1.644300 ms (FindLiveObjects: 0.134000 ms CreateObjectMapping: 0.032500 ms MarkObjects: 1.464400 ms  DeleteObjects: 0.012500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002697 seconds.
+Registered in 0.002024 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.905 seconds
+- Completed reload, in  0.822 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.9 MB.
 System memory in use after: 61.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1636.
-Total: 1.784600 ms (FindLiveObjects: 0.140600 ms CreateObjectMapping: 0.044200 ms MarkObjects: 1.585000 ms  DeleteObjects: 0.013700 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1634.
+Total: 1.772800 ms (FindLiveObjects: 0.169400 ms CreateObjectMapping: 0.038000 ms MarkObjects: 1.551800 ms  DeleteObjects: 0.012600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002042 seconds.
+Registered in 0.003084 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.856 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1637.
+Total: 1.593400 ms (FindLiveObjects: 0.113300 ms CreateObjectMapping: 0.029900 ms MarkObjects: 1.436400 ms  DeleteObjects: 0.013000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.854 seconds
 Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1640.
+Total: 1.781300 ms (FindLiveObjects: 0.132400 ms CreateObjectMapping: 0.040400 ms MarkObjects: 1.593800 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001948 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.9 MB.
 System memory in use after: 61.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1639.
-Total: 1.562400 ms (FindLiveObjects: 0.116900 ms CreateObjectMapping: 0.031200 ms MarkObjects: 1.402100 ms  DeleteObjects: 0.011200 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1643.
+Total: 1.843500 ms (FindLiveObjects: 0.232000 ms CreateObjectMapping: 0.043200 ms MarkObjects: 1.545900 ms  DeleteObjects: 0.021000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002758 seconds.
+Registered in 0.002309 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.834 seconds
+- Completed reload, in  0.908 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.9 MB.
 System memory in use after: 61.0 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1642.
-Total: 2.214400 ms (FindLiveObjects: 0.233200 ms CreateObjectMapping: 0.067000 ms MarkObjects: 1.896700 ms  DeleteObjects: 0.016400 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1646.
+Total: 1.813800 ms (FindLiveObjects: 0.219600 ms CreateObjectMapping: 0.066400 ms MarkObjects: 1.512600 ms  DeleteObjects: 0.014100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001808 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.870 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1649.
+Total: 1.687900 ms (FindLiveObjects: 0.133800 ms CreateObjectMapping: 0.035300 ms MarkObjects: 1.505000 ms  DeleteObjects: 0.012600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001893 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.845 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1652.
+Total: 1.623200 ms (FindLiveObjects: 0.233300 ms CreateObjectMapping: 0.061600 ms MarkObjects: 1.314800 ms  DeleteObjects: 0.012600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001801 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.860 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1655.
+Total: 1.625700 ms (FindLiveObjects: 0.112300 ms CreateObjectMapping: 0.031300 ms MarkObjects: 1.469100 ms  DeleteObjects: 0.012300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002208 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.914 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.9 MB.
+System memory in use after: 61.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1658.
+Total: 2.082500 ms (FindLiveObjects: 0.225100 ms CreateObjectMapping: 0.047000 ms MarkObjects: 1.794700 ms  DeleteObjects: 0.014000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

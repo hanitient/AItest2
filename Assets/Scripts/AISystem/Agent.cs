@@ -1,71 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 
-public class Agent
+public abstract class Agent
 {
     public Dictionary<string,ValueFunction> valueFunctions=new Dictionary<string, ValueFunction>();
     public Dictionary<string, QFunction> qFunctions = new Dictionary<string, QFunction>();
     public Dictionary<string, PolicyFunction> policyFunctions = new Dictionary<string, PolicyFunction>();
-    public int valueSum = 0;
-    public float totalReward = 0;
 
-    int currentAction;
-    string currentState;
+    //action的维度
+    protected int nActions;
+
+    //agent在一次游戏中游玩的次数
+    public int episode=1;
+    //总共玩几次游戏
+    public int maxEpisode=10000;
+    //游戏是否结束
+    public bool gameEnd=false;
+    //每几回合report一次agent的表现
+    public int reportPerEpisode=1000;
+    //判断是否report的变量
+    protected int reportEpisodeCount;
+    //记录在report时totalreward的值
+    protected float rewardCount;
+
+    public float totalReward;
+    public int currentAction;
+    public string currentState;
     public float instantReward;
 
-    /** 用于Monte Carlo模拟的数据记录 **/
-    public List<List<int>> actionRecord = new List<List<int>>();
-    public List<List<float>> rewardRecord = new List<List<float>>();
-    public List<List<string>> stateRecord = new List<List<string>>();
-    public List<List<string>> stateActionRecord = new List<List<string>>();
+    //用于存储AI模型的存储器
+    public AgentStorager storage;
 
-    public List<int> eActionRecord = new List<int>();
-    public List<float> eRewardRecord = new List<float>();
-    public List<string> eStateRecord = new List<string>();
-    public List<string> eStateActionRecord = new List<string>();
-    /** end **/
+    public delegate void AgentHandler();
+    //每回合时要调用哪些行为
+    public event AgentHandler OnEndRound;
+    //每次游戏结束时要调用那些行为
+    public event AgentHandler OnEndEpisode;
 
-    public void Initiate()
+    //初始化
+    public virtual void Initiate(int maxEpisode,int nActions)
     {
-        for (int i = 1; i <= 30; i++)
+        this.maxEpisode = maxEpisode;
+        this.nActions = nActions;
+        gameEnd = false;
+        try
         {
-            for (int j = 10; j <= 20; j++)
-            {
-                string state= i.ToString() + j.ToString();
-                for (int k = 0; k < 2; k++)
-                {
-                    QFunction q = new QFunction();
-                    q.state = state;
-                    q.action = k;
-                    q.value = 0;
-                    q.counts = 0;
-                    qFunctions.Add(state+q.action.ToString(), q);
-                }
-                PolicyFunction p = new PolicyFunction();
-                p.state = state;
-                p.policy = new float[] { 0.5f, 0.5f };
-                policyFunctions.Add(state, p);
-            }
+            storage.Load();
+        }
+        catch
+        {
+            Debug.LogWarning("不存在已经过训练的模型！");
         }
     }
-    public void StartNewEpisode()
-    {
-        instantReward = 0;
-        currentAction = 0;
-        currentState = "";
-    }
-    //public void UpdateValue(int state,float value)
-    //{
-    //    values[state] = value;
-    //}
-    //public void UpdatePolicy(int state, float[] policy)
-    //{
-    //    policies[state] = policy;
-    //}
 
-    public float[] PolicyFunction(string state)
+    //根据state返回policy
+    public virtual float[] PolicyFromState(string state)
     {
         if (policyFunctions.ContainsKey(state))
         {
@@ -77,80 +69,102 @@ public class Agent
             return null;
         }
     }
-    public void AgentPlay()
+
+    //greedy policy improvement
+    public virtual void PolicyImprovement(string state,float epsilon)
     {
-        if (GameManager.Instance.GameState==GameState.PlayerState)
+        List<float> qS = new List<float>();
+        List<int> maxQsIndex = new List<int>();
+        for (int i = 0; i < nActions; i++)
         {
-            currentState = valueSum.ToString() + GameManager.Instance.Dealer.valueSum.ToString();
-            currentAction = StaticData.GetRandomElement(PolicyFunction(currentState));
-            if (currentAction == 0)
+            qS.Add(qFunctions[state + i.ToString()].value);
+        }
+        List<float> temp=new List<float>(qS);
+        temp.Sort();
+        float maxQ = temp[nActions-1];
+        for (int i = 0; i < nActions; i++)
+        {
+            if (qS[i] == maxQ)
             {
-                GameManager.Instance.Hit();
+                maxQsIndex.Add(i);
+            }
+        }
+        int maxN = maxQsIndex.Count;
+        float[] policy = new float[nActions];
+        for (int i = 0; i < policy.Length; i++)
+        {
+            if (maxQsIndex.Count > 0)
+            {
+                if (i == maxQsIndex[0])
+                {
+                    policy[i] = (1 - epsilon) / maxN;
+                    maxQsIndex.RemoveAt(0);
+                }
+                else
+                {
+                    policy[i] = episode / (nActions - maxN);
+                }
             }
             else
             {
-                GameManager.Instance.Stick();
+                policy[i] = episode / (nActions - maxN);
             }
         }
     }
-    public void AgentRecordInEpisode()
-    {
-        eStateRecord.Add(currentState);
-        eActionRecord.Add(currentAction);
-        eRewardRecord.Add(instantReward);
-        eStateActionRecord.Add(currentState+currentAction.ToString());
-    }
-    public void AgentRecordEndEpisode()
-    {
-        AgentRecordInEpisode();
-        rewardRecord.Add(eRewardRecord);
-        stateRecord.Add(eStateRecord);
-        actionRecord.Add(eActionRecord);
-        stateActionRecord.Add(eStateActionRecord);
-        eRewardRecord = new List<float>();
-        eStateRecord = new List<string>();
-        eActionRecord = new List<int>();
-        eStateActionRecord = new List<string>();
-    }
-    public void PolicyImprovement(string state)
-    {
-        float q1 = qFunctions[state+0.ToString()].value;
-        float q2 = qFunctions[state+1.ToString()].value;
-        if (q1 > q2)
-        {
-            policyFunctions[state].policy = new float[] { 0.95f, 0.05f };
-        }else if (q1 < q2)
-        {
-            policyFunctions[state].policy = new float[] { 0.05f, 0.95f };
-        }
-        else
-        {
-            policyFunctions[state].policy = new float[] { 0.5f, 0.5f };
-        }
-    }
-    //first-visit Monte Carlo Q-function evaluation
-    public void FVMCLearning()
-    {
-        for(int index=0;index<rewardRecord.Count;index++)
-        {
-            int lastIndex = rewardRecord[index].Count - 1;
-            float G = 0;
-            if (lastIndex > 0)
-            {
-                for (int i = lastIndex; i >= 0; i--)
-                {
-                    //Debug.LogWarning(i+" "+l.Count);
-                    G += rewardRecord[index][i];
-                    if (stateActionRecord[index][i] == stateActionRecord[index][lastIndex])
-                    {
-                        qFunctions[stateActionRecord[index][i]].counts += 1;
-                        qFunctions[stateActionRecord[index][i]].value += G / qFunctions[stateActionRecord[index][i]].counts;
-                        PolicyImprovement(stateRecord[index][i]);
-                        G = 0;
-                    }
-                }
-            }
 
+    //angent在游戏进行时的行为
+    public virtual void Play()
+    {
+        if (episode > maxEpisode) gameEnd = true;
+    }
+
+    //agent learning时调用
+    public virtual void Learning()
+    {
+        if (gameEnd)
+        {
+            storage.Save();
+            Debug.LogWarning("储存完成！");
+            foreach (PolicyFunction p in policyFunctions.Values)
+            {
+                Debug.LogWarning("state" + p.state + "下选stick的概率" + p.policy[1].ToString());
+            }
         }
+    }
+
+
+    //每次游戏结束时调用
+    public virtual void EndEpisode()
+    {
+        episode += 1;
+        instantReward = 0;
+        currentAction = 0;
+        currentState = "";
+        reportEpisodeCount++;
+        if (reportEpisodeCount >= reportPerEpisode)
+        {
+            reportEpisodeCount = 0;
+            Debug.LogWarning("这"+reportPerEpisode+"回合中，agent的totalreward是:"+(totalReward-rewardCount).ToString());
+            rewardCount = totalReward;
+        }
+        if (OnEndEpisode != null)
+        {
+            OnEndEpisode();
+        }
+    }
+
+    public virtual void EndRound()
+    {
+        if (OnEndRound != null)
+        {
+            OnEndRound();
+        }
+    }
+
+    //agent获得当期reward
+    public virtual void GetReward(float reward)
+    {
+        instantReward = reward;
+        totalReward += instantReward;
     }
 }

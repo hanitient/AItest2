@@ -6,38 +6,33 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] 
     CardFactory cardFactory;
-    Agent agent=new Agent();
-    Dealer dealer = new Dealer();
-    public CardFactory CardFactory { get => cardFactory; private set { } }
-    GameState gameState = GameState.DealerState;
-    int episode = 1;
-    public int Episode { get => episode; set => episode = value; }
-    public Agent Agent { get => agent; set => agent = value; }
-    public Dealer Dealer { get => dealer; set => dealer = value; }
-    public GameState GameState { get => gameState; set => gameState = value; }
 
+    FTMCAgent agent=new FTMCAgent();
+    Dealer dealer = new Dealer();
+    //ÓÎÏ·µÄ½×¶Î
+    GameState gameState;
+
+    public FTMCAgent Agent { get => agent;}
+    public Dealer Dealer { get => dealer; }
+    public GameState GameState { get => gameState; }
     // Start is called before the first frame update
     void Start()
     {
-        CardFactory.Initiate();
-        Agent.Initiate();
+        cardFactory.Initiate();
+        agent.Initiate(1000,2);
+        gameState = GameState.DealerState;
         EnterIntoState(GameState.DealerState);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        switch (GameState)
-        {
-            case GameState.PlayerState:
-                agent.AgentPlay();
-                break;
-        }
+    { 
+        agent.Play();
     }
 
     private void EnterIntoState(GameState gs)
     {
-        CardFactory.ReclaimAll();
+        cardFactory.ReclaimAll();
         switch (gs)
         {
             case GameState.PlayerState:
@@ -45,61 +40,16 @@ public class GameManager : Singleton<GameManager>
                 UIManager.Instance.stickButton.gameObject.SetActive(true);
                 break;
             case GameState.DealerState:
-                Dealer.valueSum = 0;
-                Agent.valueSum = 0;
-                Card playerBase = CardFactory.Get(Random.Range(1, 10), CardColor.Black);
-                UIManager.Instance.playerBaseCardTxt.text = "Íæ¼Òµ×ÅÆ£º" + playerBase.Color.ToString() + " " + playerBase.Value.ToString();
-                Card dealerBase = CardFactory.Get(Random.Range(1, 10), CardColor.Black);
-                UIManager.Instance.dealerBaseCardTxt.text = "dealerµ×ÅÆ£º" + dealerBase.Color.ToString() + " " + dealerBase.Value.ToString();
-                Agent.valueSum += playerBase.Value;
-                Dealer.valueSum += dealerBase.Value;
-                while (Dealer.valueSum < 10)
-                {
-                    Card c = CardFactory.GetRandomCard();
-                    if (c.Color == CardColor.Red)
-                    {
-                        Dealer.valueSum += c.Value;
-                    }
-                    else if (c.Color == CardColor.Black)
-                    {
-                        Dealer.valueSum += c.Value;
-                    }
-                }
-
+                InitiateEpisode();
                 switchToState(GameState.PlayerState);
                 break;
             case GameState.CountingState:
-                if (agent.valueSum > 21 && Dealer.valueSum > 21)
-                {
-                    agent.instantReward = 0;
-                }
-                else
-                {
-                    if (agent.valueSum > 21) agent.instantReward = -1;
-                    else if (Dealer.valueSum > 21) agent.instantReward = 1;
-                    else
-                    {
-                        if (agent.valueSum > Dealer.valueSum) agent.instantReward = 1;
-                        if (agent.valueSum < Dealer.valueSum) agent.instantReward = -1;
-                    }
-                }
-                agent.AgentRecordEndEpisode();
-                agent.totalReward += agent.instantReward;
+                CountingEpisode();
                 UIManager.Instance.UpdateUI();
-                if (episode < StaticData.EpisodeLength) switchToState(GameState.DealerState);
-                else
+                agent.Learning();
+                if (!agent.gameEnd)
                 {
-                    Debug.LogWarning(agent.stateRecord.Count);
-                    Debug.LogWarning(agent.stateActionRecord.Count);
-                    agent.FVMCLearning();
-                    foreach (QFunction q in agent.qFunctions.Values)
-                    {
-                        if (q.value != 0) Debug.Log("qfunction:" + q.value);
-                    }
-                    foreach (PolicyFunction q in agent.policyFunctions.Values)
-                    {
-                        Debug.Log("policyFunction"+ q.state+" stickµÄ¸ÅÂÊ:"  +q.policy[1]);
-                    }
+                    switchToState(GameState.DealerState);
                 }
                 break;
         }
@@ -116,27 +66,21 @@ public class GameManager : Singleton<GameManager>
             case GameState.DealerState:
                 break;
             case GameState.CountingState:
-                episode += 1;
-                if (episode > StaticData.EpisodeLength)
-                {
-                    episode = 1;
-                    agent.totalReward = 0;
-                }
-                agent.StartNewEpisode();
+                agent.EndEpisode();
                 break;
         }
     }
-    public void switchToState(GameState gs)
+    private void switchToState(GameState gs)
     {
         UIManager.Instance.UpdateUI();
         ExitFromState(GameState);
-        GameState = gs;
+        gameState = gs;
         EnterIntoState(GameState);
     }
     public void Hit()
     {
-        CardFactory.ReclaimAll();
-        Card c = CardFactory.GetRandomCard();
+        cardFactory.ReclaimAll();
+        Card c = cardFactory.GetRandomCard();
         if (c.Color == CardColor.Red)
         {
             agent.valueSum += c.Value;
@@ -145,21 +89,61 @@ public class GameManager : Singleton<GameManager>
         {
             agent.valueSum += c.Value;
         }
+        UIManager.Instance.UpdateUI();
+
         if (agent.valueSum > 21||agent.valueSum<-20)
         {
             switchToState(GameState.CountingState);
+            return;
         }
-        else
-        {
-            agent.AgentRecordInEpisode();
-        }
-        UIManager.Instance.UpdateUI();
+        agent.EndRound();
     }
     public void Stick()
     {
         switchToState(GameState.CountingState);
     }
 
+    private void InitiateEpisode()
+    {
+        dealer.valueSum = 0;
+        agent.valueSum = 0;
+        Card playerBase = cardFactory.Get(Random.Range(1, 10), CardColor.Black);
+        UIManager.Instance.playerBaseCardTxt.text = "Íæ¼Òµ×ÅÆ£º" + playerBase.Color.ToString() + " " + playerBase.Value.ToString();
+        Card dealerBase = cardFactory.Get(Random.Range(1, 10), CardColor.Black);
+        UIManager.Instance.dealerBaseCardTxt.text = "dealerµ×ÅÆ£º" + dealerBase.Color.ToString() + " " + dealerBase.Value.ToString();
+        agent.valueSum += playerBase.Value;
+        dealer.valueSum += dealerBase.Value;
+        while (dealer.valueSum < 10)
+        {
+            Card c = cardFactory.GetRandomCard();
+            if (c.Color == CardColor.Red)
+            {
+                dealer.valueSum += c.Value;
+            }
+            else if (c.Color == CardColor.Black)
+            {
+                dealer.valueSum += c.Value;
+            }
+        }
+    }
 
+    private void CountingEpisode()
+    {
+        if (agent.valueSum > 21 && dealer.valueSum > 21)
+        {
+            agent.GetReward(0);
+        }
+        else
+        {
+            if (agent.valueSum > 21) agent.GetReward (- 1);
+            else if (dealer.valueSum > 21) agent.GetReward(1);
+            else
+            {
+                if (agent.valueSum > dealer.valueSum) agent.GetReward(1);
+                if (agent.valueSum < dealer.valueSum) agent.GetReward(-1);
+            }
+        }
+        agent.EndRound();
+    }
 
 }

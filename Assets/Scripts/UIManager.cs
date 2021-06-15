@@ -19,6 +19,6 @@ public class UIManager :Singleton<UIManager>
         playerValueSumTxt.text = "player本局点数：" + GameManager.Instance.Agent.valueSum.ToString();
         dealerValueSumTxt.text = "dealer本局点数：" + GameManager.Instance.Dealer.valueSum.ToString();
         playerTotalRewardTxt.text = "总得分：" + GameManager.Instance.Agent.totalReward.ToString();
-        episodeTxt.text = "当前回合数：" + GameManager.Instance.Episode.ToString();
+        episodeTxt.text = "当前回合数：" + GameManager.Instance.Agent.episode.ToString();
     }
 }

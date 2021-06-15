@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class StaticData
 {
-    public static int EpisodeLength=200000;
+    public static int EpisodeLength=1000;
     //给一个列表，输出一个随机的index
     public static int GetRandomElement(float[] probabilities)
     {
