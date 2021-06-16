@@ -18,7 +18,7 @@ public static class StaticData
         }
         if (sum !=1)
         {
-            Debug.LogAssertion("概率列表输入错误");
+            Debug.LogAssertion("概率列表输入错误!概率总和为:"+sum);
             return 0;
         }
         //输出随机出来的元素

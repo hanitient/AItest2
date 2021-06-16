@@ -57,27 +57,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Excel\PrintExcel.cs" />
+    <Compile Include="Assets\Scripts\AISystem\Agents\Sarsa0Agent.cs" />
     <Compile Include="Assets\Scripts\Types.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\AISystem\Dealer.cs" />
+    <Compile Include="Assets\Scripts\IO\GameDataWriter.cs" />
+    <Compile Include="Assets\Scripts\AISystem\Agents\Dealer.cs" />
     <Compile Include="Assets\Scripts\Framework\Objectpool\ReusableObject.cs" />
     <Compile Include="Assets\Scripts\Factories\GameObjectFactory.cs" />
     <Compile Include="Assets\Scripts\Framework\Objectpool\IsReusable.cs" />
     <Compile Include="Assets\Scripts\Card\Card.cs" />
     <Compile Include="Assets\Scripts\Framework\StaticData.cs" />
-    <Compile Include="Assets\Scripts\AISystem\Agent.cs" />
+    <Compile Include="Assets\Scripts\AISystem\Agents\Agent.cs" />
     <Compile Include="Assets\Scripts\Factories\CardFactory.cs" />
-    <Compile Include="Assets\Scripts\AISystem\QFunction.cs" />
+    <Compile Include="Assets\Scripts\AISystem\FrameWork\QFunction.cs" />
+    <Compile Include="Assets\Scripts\IO\GameDataReader.cs" />
     <Compile Include="Assets\Scripts\Framework\Singleton.cs" />
     <Compile Include="Assets\Excel\DoExcel.cs" />
+    <Compile Include="Assets\Scripts\AISystem\Agents\FTMCAgent.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\AISystem\PolicyFunction.cs" />
-    <Compile Include="Assets\Scripts\AISystem\ValueFunction.cs" />
-    <Compile Include="Assets\Scripts\IO\GameDataWriter.cs" />
-    <Compile Include="Assets\Scripts\IO\GameDataReader.cs" />
     <Compile Include="Assets\Scripts\IO\AgentStorager.cs" />
-    <Compile Include="Assets\Scripts\AISystem\SarsaLearner.cs" />
-    <Compile Include="Assets\Scripts\AISystem\FTMCAgent.cs" />
+    <Compile Include="Assets\Scripts\AISystem\FrameWork\PolicyFunction.cs" />
+    <Compile Include="Assets\Scripts\AISystem\FrameWork\ValueFunction.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Excel\EPPlus.dll" />

@@ -7,19 +7,30 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] 
     CardFactory cardFactory;
 
-    FTMCAgent agent=new FTMCAgent();
+    Sarsa0Agent agent = new Sarsa0Agent();
+    //FTMCAgent agent = new FTMCAgent();
     Dealer dealer = new Dealer();
     //ÓÎÏ·µÄ½×¶Î
     GameState gameState;
 
-    public FTMCAgent Agent { get => agent;}
+    public Sarsa0Agent Agent { get => agent; }
+    //public TDAgent Agent { get => agent; }
     public Dealer Dealer { get => dealer; }
     public GameState GameState { get => gameState; }
     // Start is called before the first frame update
     void Start()
     {
         cardFactory.Initiate();
-        agent.Initiate(1000,2);
+        List<string> states = new List<string>();
+        for (int i = 1; i <= 30; i++)
+        {
+            for (int j = 10; j <= 20; j++)
+            {
+                string state = i.ToString() + j.ToString();
+                states.Add(state);
+            }
+        }
+        agent.Initiate(10000,2,states);
         gameState = GameState.DealerState;
         EnterIntoState(GameState.DealerState);
     }
@@ -90,9 +101,9 @@ public class GameManager : Singleton<GameManager>
             agent.valueSum += c.Value;
         }
         UIManager.Instance.UpdateUI();
-
         if (agent.valueSum > 21||agent.valueSum<-20)
         {
+            agent.CountingInstantReward();
             switchToState(GameState.CountingState);
             return;
         }
@@ -100,6 +111,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void Stick()
     {
+        agent.CountingInstantReward();
         switchToState(GameState.CountingState);
     }
 
@@ -129,20 +141,6 @@ public class GameManager : Singleton<GameManager>
 
     private void CountingEpisode()
     {
-        if (agent.valueSum > 21 && dealer.valueSum > 21)
-        {
-            agent.GetReward(0);
-        }
-        else
-        {
-            if (agent.valueSum > 21) agent.GetReward (- 1);
-            else if (dealer.valueSum > 21) agent.GetReward(1);
-            else
-            {
-                if (agent.valueSum > dealer.valueSum) agent.GetReward(1);
-                if (agent.valueSum < dealer.valueSum) agent.GetReward(-1);
-            }
-        }
         agent.EndRound();
     }
 
