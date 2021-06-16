@@ -1606,3 +1606,60 @@ System memory in use after: 61.3 MB.
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1783.
 Total: 1.857600 ms (FindLiveObjects: 0.156300 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.619200 ms  DeleteObjects: 0.041100 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001936 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.860 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1134 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.2 MB.
+System memory in use after: 61.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1786.
+Total: 1.742100 ms (FindLiveObjects: 0.126300 ms CreateObjectMapping: 0.032700 ms MarkObjects: 1.569300 ms  DeleteObjects: 0.013200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 16250.773399 seconds.
+  path: Assets/Scripts/AISystem/Agents/Sarsa0Agent.cs
+  artifactKey: Guid(0bc0096b075e1204fb4c3d8ca4109896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AISystem/Agents/Sarsa0Agent.cs using Guid(0bc0096b075e1204fb4c3d8ca4109896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f4ce612bb1a2b476043d395b91388f') in 0.004785 seconds
+  Import took 0.007587 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000781 seconds.
+  path: Assets/Scripts/AISystem/Agents/Sarsa0Agent.cs
+  artifactKey: Guid(0bc0096b075e1204fb4c3d8ca4109896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AISystem/Agents/Sarsa0Agent.cs using Guid(0bc0096b075e1204fb4c3d8ca4109896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f4ce612bb1a2b476043d395b91388f') in 0.002551 seconds
+  Import took 0.004314 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003741 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.830 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1134 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.3 MB.
+System memory in use after: 61.4 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1789.
+Total: 2.100500 ms (FindLiveObjects: 0.250300 ms CreateObjectMapping: 0.036500 ms MarkObjects: 1.799300 ms  DeleteObjects: 0.013500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
