@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class StaticData
 {
-    public static int EpisodeLength=200000;
+    public static int EpisodeLength=1000;
     //给一个列表，输出一个随机的index
     public static int GetRandomElement(float[] probabilities)
     {
@@ -18,7 +18,7 @@ public static class StaticData
         }
         if (sum !=1)
         {
-            Debug.LogAssertion("概率列表输入错误");
+            Debug.LogAssertion("概率列表输入错误!概率总和为:"+sum);
             return 0;
         }
         //输出随机出来的元素
