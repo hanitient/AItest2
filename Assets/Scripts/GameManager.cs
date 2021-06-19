@@ -30,7 +30,7 @@ public class GameManager : Singleton<GameManager>
                 states.Add(state);
             }
         }
-        agent.Initiate(10000,2,states);
+        agent.Initiate(100000,2,states);
         gameState = GameState.DealerState;
         EnterIntoState(GameState.DealerState);
     }

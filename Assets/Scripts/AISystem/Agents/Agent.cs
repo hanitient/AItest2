@@ -34,7 +34,7 @@ public abstract class Agent
 
     public string nextState;
     public bool episodeEnd = false;
-    public float stepSize = 0.1f;
+    public float stepSize = 0.00001f;
     //用于存储AI模型的存储器
     public AgentStorager storage;
 
@@ -155,10 +155,10 @@ public abstract class Agent
     {
         if (gameEnd)
         {
-            //foreach (PolicyFunction p in policyFunctions.Values)
-            //{
-            //    if (p.policy[1] != 0.5f) Debug.LogWarning("state:" + p.state + " strick:" + p.policy[1]);
-            //}
+            foreach (PolicyFunction p in policyFunctions.Values)
+            {
+                if (p.policy[1] != 0.5f) Debug.LogWarning("state:" + p.state + " strick:" + p.policy[1]);
+            }
             storage.Save();
             Debug.LogWarning("model储存完成！");
         }
@@ -169,6 +169,7 @@ public abstract class Agent
     public virtual void EndEpisode()
     {
         episode += 1;
+        stepSize = 1 / episode;
         instantReward = 0;
         currentAction = 0;
         currentState = "";
